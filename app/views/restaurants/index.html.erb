@@ -1,0 +1,9 @@
+<h1>Restaurants</h1>
+  <% @restaurants.each do |restaurant| %>
+<ul class = "mx-auto" >
+  <li class = "list-unstyled">
+    <h4><%= restaurant.name %></h4>  <%= link_to "details", restaurant_path(restaurant) %>
+  </li>
+</ul>
+  <% end %>
+  <%= link_to 'Create a Restaurant', new_restaurant_path, class: "btn btn-primary"%>
